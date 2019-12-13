@@ -17,6 +17,7 @@ export class AppComponent  {
 
   onSubmitData(){
     // this.demoService.getPrediction();
-    this.prediction = "Sorry, it's gone forever";
+    // this.prediction = "Sorry, it's gone forever";
+    alert("Sorry, the Flask Server is not running. Cannot get response.");
   }
 }
