@@ -6,4 +6,4 @@ For this project, we used a large set of data to help us figure out the best pra
 
 
 ### Bike Theft Website
-![Image of Website]('./BikeTheftStackblitz.png')
+![Image of Website](/BikeTheftStackblitz.png)
