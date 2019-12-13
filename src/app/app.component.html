@@ -1,13 +1,13 @@
 <mat-toolbar color="primary" class="header mat-elevation-z8">
   <mat-toolbar-row>
     <h6>Bike Risk Assessor</h6>
-    <h6 style="margin-left: auto">Made by: Group 6</h6>
+    <h6 style="margin-left: auto">Made by: Group 5</h6>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <div class="container">
   <mat-card class="mat-card-container mat-elevation-z8">
-      <h1> <strong>Is Your Bike Location Safe?</strong></h1>
+      <h1> <strong>Will You Get Your Bike Back?</strong></h1>
       <mat-divider></mat-divider>
       <p style="margin:30px 0 30px 0;">How likely is your bike to get stolen, based on a few metrics? Fill in the information to find out</p>
 
@@ -19,7 +19,7 @@
             <mat-hint>Rough estimate in dollars</mat-hint>
           </mat-form-field>
         </div> -->
-        <div class="col-md-3">
+        <div class="col-md-4">
             <mat-form-field>
               <mat-label>Week of the Month</mat-label>
               <select matNativeControl required>
@@ -30,7 +30,7 @@
               </select>
             </mat-form-field>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <mat-form-field>
               <mat-label>Season</mat-label>
               <select matNativeControl required>
@@ -39,7 +39,7 @@
               </select>
             </mat-form-field>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <mat-form-field>
               <mat-label>Regions</mat-label>
               <select matNativeControl required>
@@ -52,17 +52,18 @@
               </select>
             </mat-form-field>
         </div>
-        <div class="col-md-3">
+      </div>
+      <div class="row" style="margin-top:30px;">
+        <div class="col-md-4">
             <mat-form-field>
               <mat-label>Premise Type</mat-label>
               <select matNativeControl required>
-                <option value="">Premise</option>
+                <option value="outdoor">Outdoor</option>
+                <option value="indoor">Indoor</option>
               </select>
             </mat-form-field>
         </div>
-      </div>
-      <div class="row" style="margin-top:30px;">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <mat-form-field>
               <mat-label>Colour</mat-label>
               <select matNativeControl required>
@@ -73,7 +74,7 @@
               </select>
             </mat-form-field>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <mat-form-field>
               <mat-label>Bike Type</mat-label>
               <select matNativeControl required>
@@ -87,23 +88,18 @@
               </select>
             </mat-form-field>
         </div>
-        <div class="col-md-3">
-            <mat-form-field>
-              <mat-label>Status</mat-label>
-              <select matNativeControl required>
-                <option value="stolen">Stolen</option>
-              </select>
-            </mat-form-field>
-        </div>
       </div>
       <div class="row">
         <div style="margin-left: 80%; margin-top:30px; margin-bottom: 30px;">
-          <button mat-raised-button color="primary">Submit</button>
+          <button mat-raised-button color="primary" (click)="onSubmitData()">Submit</button>
         </div>
       </div>
         <mat-divider></mat-divider>
       <div class="row" style="margin:30px 0 30px 30px">
         <h3> Result: </h3>
+      </div>
+      <div class="row">
+        <p> {{prediction}}</p>
       </div>
   </mat-card>
 

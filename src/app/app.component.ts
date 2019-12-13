@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { DemoService } from './demo.service';
 
 @Component({
   selector: 'my-app',
@@ -8,5 +9,14 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent  {
+  prediction='';
   name = 'Angular';
+  constructor(
+    // private demoService: DemoService
+    ) { }
+
+  onSubmitData(){
+    // this.demoService.getPrediction();
+    this.prediction = "Sorry, it's gone forever";
+  }
 }
